@@ -1,20 +1,24 @@
 * {
-	box-sizing: border-box;
+	box-sizing: border-box;    
 }
 
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0;
+	
 }
 
 body {
 	margin: 0;
-	font-family:'Open Sans', sans-serif;
+	font-family: 'Roboto Slab', serif;
 }
-header {
+header, footer {
 	height: 50px;
 	background-color:#313234;
+	text-align: center;
+	line-height: 50px;
+	color: white;
 }
 nav ul{
 	margin: 0;
@@ -40,7 +44,7 @@ nav ul li a {
 }
 
 .hero {
-	background-image: url('hero1.jpg');
+	background-image: url('images/hero1.jpg');
 	height: 500px;	
 	width: auto;
 	margin: 0;
@@ -51,18 +55,20 @@ nav ul li a {
 	float: right;
 	max-width: 800px;
 	height: 200px;
-	width: 600px;
+	width: 700px;
 	color: #fff;
 	font-size: 60px;
 	text-align: left;
 	background-color: rgba(0, 0, 0, 0.3);
 	margin-top: 100px;
 	padding: 0;
+	display: none;
 }
 .slogan h1{
 	line-height: 200px;
 	margin:0;
-	padding-left:15px;
+	padding-left:10px;
+	font-family: 'Lemonada', cursive;
 }
 
 
@@ -78,6 +84,8 @@ nav ul li a {
 	float: left; 
 	min-height: 1px; 
 	padding: 5px;
+	
+	
 }
 .col-1 {width: 8.33%;} 
 .col-2 {width: 16.66%;} 
@@ -110,11 +118,121 @@ nav ul li a {
 	color: white;
 }
 .aboutme img{
-	padding-top: 20px;
+	margin-top: 20px;
+	box-shadow: 10px 10px .5px rgba(0, 0, 0, 0.2);
 }
-.aboutme h2, .aboutme p {
+.aboutme article {
 	padding-left: 100px;
 }
-.aboutme b{
-	color: ;
+
+.cv, .myskills {
+	text-align: center;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	
 }
+
+h3, h2 {
+	text-align: center;
+	text-transform: uppercase;
+	
+}
+
+.cv ul{
+	list-style: none;
+}
+
+.education [class*="col-"], .job [class*="col-"]  {
+	border: 5px solid #ededed; /*?????!!!!!!!!!!!!!*/
+	border-top: none;
+}
+.education [class*="col-"]:first-child, .job [class*="col-"]:first-child {
+	border-top: 5px solid #ededed;
+}
+
+.education [class*="col-"]:hover, .job [class*="col-"]:hover {
+	background-color: orange;
+}	
+
+p.img-caption {
+	font-size: 10px;
+	padding: 0;
+	margin: 0;
+}
+p.img-caption a {
+	color: white;
+}
+
+.myskills .container-skillbars {
+	width: 100%;
+	background-color: #ddd;
+}
+
+.skills {
+    text-align: right; 
+    padding-right: 20px; 
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; 
+}
+
+.html {width: 60%; background-color: #4CAF50;} /* Green */
+.css {width: 40%; background-color: #2196F3;} /* Blue */
+.js {width: 30%; background-color: #f44336;} /* Red */
+.rest {width: 30%; background-color: #808080;} /* Dark Grey */
+.eng {width: 70%; background-color: #4CAF50;} /* Green */
+.ger {width: 40%; background-color: #2196F3;}
+
+.myskills .col-6 {
+	padding: 10px 3px;
+}
+.myskills .col-6>div{
+	border: 2px solid #ededed;
+	padding: 15px;
+}
+
+.hobby {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	background-image: url("images/imagination_min.jpg");
+	
+}
+.hobby .gallery {
+	height: 523px;
+	width: 400px;
+	border: solid #ededed 2px;
+	padding: 0;
+	margin: 0 auto;  /*obcject is in the center of the website*/
+	overflow: hidden;
+	
+}
+
+.gallery > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 1200px;
+}
+.gallery > ul li {
+	/*display: inline-block;*/  /*not needed ?*/
+	float: left;*/
+}
+
+.gallery .bookgirl {
+	background-image: url("images/bookgirl_min.jpg");
+	height: 523px;
+	width: 400px;
+}
+.gallery .dog {
+	background-image: url("images/dog_min.jpg");
+	height: 523px;
+	width: 400px;
+	
+}
+.gallery .forest {
+	background-image: url("images/forest_min.jpg");
+	height: 523px;
+	width: 400px;
+}
+
+
