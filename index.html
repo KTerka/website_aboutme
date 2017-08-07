@@ -4,21 +4,24 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="My own HTML5 website///Strona o mnie">  
 		<meta name="author" content="Katarzyna Terka">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<title> Katarzyna Terka</title>
 	</head>
 	<body>
 		<header>
+		<a href="#" class="btn open-menu">MENU</a>
 			<nav class="container">
 				<ul class="navigation">
-					<li><a href="#about_me">O mnie</a></li>
-					<li><a href="#cv">CV</a></li>
-					<li><a href="#skills">Umiejętności</a></li>
-					<li><a href="#contact_to">Kontakt</a></li>
-					<li><a href="#hobby">hobby</a></li>
+					<li><a href="#about_me" class="btn hide-mobile" >O mnie</a></li>
+					<li><a href="#cv" class="btn hide-mobile">CV</a></li>
+					<li><a href="#skills" class="btn hide-mobile">Umiejętności</a></li>
+					<li><a href="#projects" class="btn hide-mobile">Projekty</a></li>
+					<li><a href="#contact_to" class="btn hide-mobile">Kontakt</a></li>
+					<li><a href="#hobby" class="btn hide-mobile">hobby</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -29,20 +32,21 @@
 		</section>
 		<section class="aboutme" id="about_me">
 			<div class="row container">
-				<div class="col-4">
+				<div class="col-4 col-s-12 myphoto">
 					<img src="images/KTerka.jpg" alt="Katarzyna Terka">
-					<p class="img-caption">Zdjęcie: <a href="http://magdaolek.pl/">Magda Olek</a></p>
+					<p class="img-caption">Zdjęcie: <a href="http://magdaolek.pl/" target="_blank">Magda Olek</a></p>
 				</div>
-				<article class="col-8 ">
+				<article class="col-8 col-s-12 ">
 					<h2>Katarzyna Terka</h2>
-					<p>Jestem typowym umysłem ścisłym i <b>technicznym</b>. Od początku mojej szkolnej kariery <b>matematyka</b> była moim ublubionym przedmiotem.
-					Przerodziło się to na pewien czas w zawód nauczyciela tego przedmiotu. </p><br>
-					<p>Jednak po zrobieniu <b>studiów informatycznych </b>zrozumiałam, że to bardziej branża IT pasuje do mnie. Od tego czasu częściej przylejona do komputera niż do papieru, koduje, ucze się, oglądam.
-					W domu też jest łatwiej bo nagle więcej rozumiem z tego co do mnie mówi mój mąż-programista. :)
-					</p><br>
-					<p>Zatem same PLUSY nowej drogi dla mnie. Obecnie szukam pracy w branży IT. </p>
+					<p>Jestem typowym umysłem ścisłym i technicznym. Od początku szkolnej kariery matematyka była moim ulubionym przedmiotem. </p>
+					<p>Jednak po ukończeniu studiów informatycznych zrozumiałam, że lepiej odnajduję się w branży IT. 
+					Od tego czasu uczestnicze w kursach programowania, oglądam tutoriale, ucze się z różnych dostępnych materiałów.
+					Mój zmysł techniczny pomaga mi w szybkim i efektywnym opanowaniu nowych języków programowania lub samych programów.
+					</p>
+					<p>Jednak wiem, że najwięcej i najszybciej nauczę się w pracy.  Dlatego obecnie szukam stanowiska i firmy, 
+							które pozwolą mi rowizjać się w nowym kierunku i tym samym być wartościowym pracownikiem.</p>
 				
-					<div class="contact" id="contact_to" >
+					<div class="contact col-12 col-s-12" id="contact_to" >
 						<ul>
 							<li><b>E-mail:</b>
 								<a href="mailto:katarzynaterka7@gmail.com">katarzynaterka7@gmail.com</a>
@@ -59,20 +63,20 @@
 		<section class="cv container" id="cv">
 			<div class="row">
 				<h2>CV - czyli moja droga edukacyjna i zwodowa</h2>
-				<div class="education col-6">
+				<div class="education col-6 col-s-12">
 					<h3>Wykształcenie i kursy</h3>
 					<div class="row">
-						<div class="col-12 onedelay">
+						<div class="col-12">
 							<p>04-07.2017  kurs Kodilla Bootcamp <strong>Front-End Developer</strong>
-								<br><span><a href="kodilla.com">kodilla.com</a></span></p>
+								<br><span><a href="https://kodilla.com/pl" target="_blank">kodilla.com</a></span></p>
 						</div>
-						<div class="col-10 col-offset-1 twodelay">
+						<div class="col-10 col-offset-1 col-s-12">
 							<p>2016-2017 studia <strong>podyplomowe z Informatyki</strong> dla nauczycieli
-								<br><span><a href="#">Uniterra</a></span></p>
+								<br><span><a href="http://wsuniterra.pl/" target="_blank">Uniterra</a></span></p>
 						</div>
-						<div class="col-8 col-offset-2 threedelay">
+						<div class="col-8 col-offset-2 threedelay col-s-12">
 							<p>2005-2010 studia stacjonarne, <strong>Matematyka</strong>, specjalność: <strong>matematyka stosowana</strong>
-							<br><span><a href="amu.edu.pl">Uniwersytet im. A. Mickiewicza w Poznaniu</a></span></p>
+							<br><span><a href="https://www.wmi.amu.edu.pl/pl/" target="_blank" >Uniwersytet im. A. Mickiewicza w Poznaniu</a></span></p>
 						</div>
 					</div>
 				</div>
@@ -81,21 +85,22 @@
 					<div class="row">
 						<div class="col-12 addborder">
 							<p>09.2014-08.2017 <strong> Nauczyciel matematyki i informatyki</strong>
-								<br><span><a href="kodilla.com">Referencje</a></span></p>
+								<br><span>szkoła podstawowa, gimnazjum, szkoła średnia</span></p>
 						</div>
 						<div class="col-10  addborder col-offset-1">
 							<p>10.2012-09.2014 <strong>Specjalista ds. analiz i raportów</strong>, Vistula Group S.A.
-								<br><span><a href="#">Referencje</a></span></p>
+								
 						</div>
 						<div class="col-8 addborder col-offset-2">
 							<p>10.2010-10.2012 <strong>Asystent w Dziale Raportów i Analiz</strong>, Holicon Sp.z o.o.
+							
 							</p>
 						</div>	
 					</div>
 				</div>
 			</div>	
 		</section>
-		<section class="container myskills">
+		<section class="container myskills" id="skills">
 			<div class="row">
 				<h2>Umiejętności</h2>
 					<div class="col-6">
@@ -117,6 +122,7 @@
 							<div class="container-skillbars">
 							  <div class="skills rest">30%</div>
 							</div>
+							
 						</div>
 					</div>
 				<div class="col-6">
@@ -133,25 +139,53 @@
 					</div>
 				</div>
 			</div>
+		<section class="container project" id="projects">
+			<h2>Moje projekty</h2>
+			<div class="row">
+				<a href="https://codepen.io/KTerka/full/mMrxOP/" target="_blank">
+					<div class="col-2 col-s-6 project1">	
+						<p class="layer">Projekt na FreeCodeAcademy</p>
+					</div>
+				</a>
+				<a href="projects/quotations/index.html" target="_blank">
+					<div class="col-2 col-s-6 project2">
+						<p class="layer">Losowanie cytatów w języku angielskim</p>
+					</div>
+				</a>
+				<a href="projects/kanban/index.html" target="_blank">
+					<div class="col-2 col-s-6 project3">
+						<p class="layer">Aplikacja - zarządzanie sobą w czasie</p>
+					</div>
+				</a>
+				<a href="projects/game/index.html" target="_blank">
+					<div class="col-2 col-s-6 project4">
+						<p class="layer">Gra - papier, kamień, nożyczki</p>
+					</div>
+				</a>
+				<a href="https://github.com/KTerka" target="_blank">
+					<div class="col-2 col-s-6 project5">
+						<p class="layer"> Moje konto na GitHub</p>
+					</div>
+				</a>
+			</div>
+		</section>
 		</section>
 		<section class="container" id="hobby">
 			<div class="row hobby">
-				<div class="col-offset-6 col-6">
+				<div class="col-offset-6 col-6 col-s-12">
 					<h2>Moje HOBBY</h2>
-						<p>Lubie rysować, głównie na papierze ale ostatnio poznaje program Blender, żeby storzyć własne animacje.</p>
-						<p>Pozatym korzystam z dobordziejstw wycieczek górskich, a na codzień uprawiam sporty typu basen czy wycieczki rowerowe.</p>
+						<p>Lubię rysować, głównie na papierze, ale ostatnio poznaję program Blender, żeby tworzyć własne animacje.</p>
+						<p>Poza tym korzystam z dobrodziejstw wycieczek górskich, a na codzień z basenu i wycieczek rowerowych.</p>
 				</div>
-						<div id="carousel" class="gallery">
+				<div id="carousel" class="gallery">
 							<ul>
 								<li class="bookgirl"></li>
 								<li class="forest"></li>
 								<li class="dog"></li>
 							</ul>
-						</div>
-				
+				</div>		
 			</div>
 		</section>
-		
 		<div id="clock">
 			Zegar
 		</div>

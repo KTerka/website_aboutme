@@ -1,17 +1,17 @@
 * {
-	box-sizing: border-box;    
+	-webkit-box-sizing: border-box; /* iOS <= 4 i Android <= 2.3 */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box; /* Chrome, Opera, Safari 5+ i IE 8+ */
 }
-
 .container {
 	max-width: 1200px;
+	width: 100%;/*RWD*/
 	margin: 0 auto;
-	padding: 0;
-	
+	padding: 0;	
 }
-
 body {
 	margin: 0;
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto Slab', serif;	
 }
 body header, footer {
 	height: 50px;
@@ -20,33 +20,36 @@ body header, footer {
 	line-height: 50px;
 	color: white;
 }
-/*header {
+header {
 	position: fixed;
 	width: 100%;
-}*/
+}
+nav.show {display:block;}
 nav ul{
 	margin: 0;
 	padding: 0;
 	float: right;
 }
-nav ul li{
+nav>ul>li{
 	list-style: none;
 	text-align: center;
 	display:inline-block;
 	width: 150px;
-	height:50px;
+	height: 50px;
 }
 nav ul li:hover {
 	background-color: grey;
 }
-nav ul li a {
+nav ul>li>a {
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 50px;
-	
+	height: 50px;	
 }
-
+.btn.hide, .btn.open-menu{
+	display: none;
+}
 .hero {
 	background-image: url('images/hero1.jpg');
 	height: 500px;	
@@ -74,22 +77,16 @@ nav ul li a {
 	padding-left:10px;
 	font-family: 'Lemonada', cursive;
 }
-
-
-
 .row:before, 
 .row:after { 
 	content:"";
 	display: table; 
 	clear: both;
 }
-
 [class*="col-"] { 
 	float: left; 
 	min-height: 1px; 
-	padding: 5px;
-	
-	
+	padding: 5px;	
 }
 .col-1 {width: 8.33%;} 
 .col-2 {width: 16.66%;} 
@@ -103,7 +100,6 @@ nav ul li a {
 .col-10 {width: 83.33%;} 
 .col-11 {width: 91.66%;} 
 .col-12 {width: 100%;}
-
 .col-offset-0 {margin-left: 0;} 
 .col-offset-1 {margin-left: 8.33%;} 
 .col-offset-2 {margin-left: 16.66%;} 
@@ -116,7 +112,6 @@ nav ul li a {
 .col-offset-9 {margin-left: 75%;} 
 .col-offset-10 {margin-left: 83.33%;}
 .col-offset-11 {margin-left: 91.66%;}
-
 .aboutme {
 	background-color: grey;
 	color: white;
@@ -124,45 +119,36 @@ nav ul li a {
 .aboutme img{
 	margin-top: 20px;
 	box-shadow: 10px 10px .5px rgba(0, 0, 0, 0.2);
+	max-width: 100%; /*RWD*/
+	height: auto;  /*RWD*/
 }
 .aboutme article {
 	padding-left: 100px;
+	text-align: justify;
 }
-
 .aboutme .contact ul{
 	list-style: none;
 	margin-top: 50px;
 	border: 2px solid #ededed;
 	padding: 15px;
-	text-align: center;
-	
+	text-align: center;	
 }
-
 .aboutme .contact ul b {
 	text-transform: uppercase;
 }
-
-
 .aboutme .contact ul a {
 	text-decoration: none;
 	color: white;
 }
-
-.cv, .myskills {
+.cv, .myskills, .project {
 	text-align: center;
 	padding-bottom: 40px;
-	padding-top: 40px;
-	
+	padding-top: 40px;	
 }
-
 h3, h2 {
 	text-align: center;
-	text-transform: uppercase;
-	
+	text-transform: uppercase;	
 }
-
-
-
 .education [class*="col-"], .job [class*="col-"]  {
 	border: 5px solid #ededed; /*?????!!!!!!!!!!!!!*/
 	border-top: none;
@@ -170,11 +156,9 @@ h3, h2 {
 .education [class*="col-"]:first-child, .job [class*="col-"]:first-child {
 	border-top: 5px solid #ededed;
 }
-
 .education [class*="col-"]:hover, .job [class*="col-"]:hover {
 	background-color: orange;
 }	
-
 p.img-caption {
 	font-size: 10px;
 	padding: 0;
@@ -183,26 +167,22 @@ p.img-caption {
 p.img-caption a {
 	color: white;
 }
-
 .myskills .container-skillbars {
 	width: 100%;
 	background-color: #ddd;
 }
-
 .skills {
     text-align: right; 
     padding-right: 20px; 
     line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
     color: white; 
 }
-
 .html {width: 60%; background-color: #4CAF50;} /* Green */
 .css {width: 40%; background-color: #2196F3;} /* Blue */
 .js {width: 30%; background-color: #f44336;} /* Red */
 .rest {width: 30%; background-color: #808080;} /* Dark Grey */
 .eng {width: 70%; background-color: #4CAF50;} /* Green */
 .ger {width: 40%; background-color: #2196F3;}
-
 .myskills .col-6 {
 	padding: 10px 3px;
 }
@@ -210,13 +190,49 @@ p.img-caption a {
 	border: 2px solid #ededed;
 	padding: 15px;
 }
-
+.project .project1{
+	background-image: url("images/project1.jpg"); 
+	
+}
+.project .project2{
+	background-image: url("images/project2.jpg"); 
+}
+.project .project3{
+	background-image: url("images/project3.jpg"); 
+}
+.project .project4{
+	background-image: url("images/project4.jpg"); 
+}
+.project .project5{
+	background-image: url("images/project5.jpg"); 
+}
+.project .col-2{
+	background-size: cover;
+	height: 140px;
+	width: 200px;
+	border: solid #ededed 5px; 
+	margin: 20px;
+	padding: 0;
+}
+.project .layer{
+	background:rgba(0,0,0,0.5);
+	line-height:45px;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: 20px;
+	display: none;
+}
+.project .col-2:hover .layer{
+	display: block;
+}
 .hobby {
 	text-align: center;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	background-image: url("images/imagination_min.jpg");
-	
 }
 .hobby .gallery {
 	height: 523px;
@@ -225,9 +241,7 @@ p.img-caption a {
 	padding: 0;
 	margin: 0 auto;  /*obcject is in the center of the website*/
 	overflow: hidden;
-	
 }
-
 .gallery > ul {
 	list-style: none;
 	padding: 0;
@@ -238,7 +252,6 @@ p.img-caption a {
 	/*display: inline-block;*/  /*not needed ?*/
 	float: left;*/
 }
-
 .gallery .bookgirl {
 	background-image: url("images/bookgirl_min.jpg");
 	height: 523px;
@@ -248,12 +261,76 @@ p.img-caption a {
 	background-image: url("images/dog_min.jpg");
 	height: 523px;
 	width: 400px;
-	
 }
 .gallery .forest {
 	background-image: url("images/forest_min.jpg");
 	height: 523px;
 	width: 400px;
 }
-
-
+@media (max-width: 767px){
+    /* For tablets, mobiles: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+	
+	[class*="col-"] { 
+		float: left; 
+		min-height: 1px; 
+		padding: 5px;
+		width: 100%;
+	}
+	nav {
+    display:none;
+	position: absolute;
+    margin:0;
+    top:0;
+	background: #313234;
+    width:100%;
+    padding: 0;
+    
+	}
+    .btn {
+      width:100%;
+      float:none;
+      padding: 0;
+      margin:5px 0;
+      border-radius:0;
+	  color: white;
+    }
+      
+    .btn.hide {display:block;}
+    .btn.open-menu {display:block;}
+	.hero {
+		height: 200px;
+		background-image: url('images/hero2.jpg');
+	}
+	.slogan {
+		font-size:0.8rem;
+		padding-right: 5px;
+		max-width: 60vw;
+		height: 100px;
+		margin-top:50px;
+	}
+	.slogan h1 {
+		line-height: 100px;
+		padding-left: 30px;
+	}
+	.aboutme article {
+		padding-left: 5px;
+	}
+	.project .layer{
+		display: block;
+	}
+	.col-offset-1 {margin-left: 0;} 
+	.col-offset-2 {margin-left: 0;} 
+	.col-offset-6 {margin-left: 0;} 	
+}

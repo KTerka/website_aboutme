@@ -1,0 +1,33 @@
+body {
+	background-color: #5DBCD2 ;
+	color: white;
+	text-align: center;
+	font-family: 'Advent Pro', sans-serif;
+	
+}
+
+header {
+	height: 100px;
+	letter-spacing: 2pt;
+	padding-top: 50px;
+}
+
+.box {
+	padding: 50px;
+}
+
+.apllicationbuttons {
+	width: 300px;
+	margin: 0 auto;
+}
+
+a {
+	color: white;
+}
+
+i {
+	width: 30px;
+	height: 30px;
+	color: white;
+	line-height: 30px;
+}
