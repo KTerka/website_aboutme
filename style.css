@@ -14,6 +14,7 @@ body {
 	font-family: 'Roboto Slab', serif;	
 }
 body header, footer {
+	width: 100%;
 	height: 50px;
 	background-color:#313234;
 	text-align: center;
@@ -24,11 +25,14 @@ header {
 	position: fixed;
 	width: 100%;
 }
-nav.show {display:block;}
+
+nav{
+	float: right;
+}
 nav ul{
 	margin: 0;
 	padding: 0;
-	float: right;
+	
 }
 nav>ul>li{
 	list-style: none;
@@ -38,7 +42,7 @@ nav>ul>li{
 	height: 50px;
 }
 nav ul li:hover {
-	background-color: grey;
+	background-color: #4c4e56;
 }
 nav ul>li>a {
 	color: #fff;
@@ -52,29 +56,28 @@ nav ul>li>a {
 }
 .hero {
 	background-image: url('images/hero1.jpg');
-	height: 500px;	
-	width: auto;
+	height: 100vh;	
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	background-size: cover;
+	background-position: bottom;/*RWD*/
 }
 .slogan {
 	float: right;
 	max-width: 800px;
-	height: 200px;
 	width: 700px;
 	color: #fff;
-	font-size: 60px;
+	font-size: 30px;
 	text-align: left;
 	background-color: rgba(0, 0, 0, 0.3);
 	margin-top: 100px;
-	padding: 0;
+	padding: 0 50px 0;
 	display: none;
 }
 .slogan h1{
 	line-height: 200px;
 	margin:0;
-	padding-left:10px;
 	font-family: 'Lemonada', cursive;
 }
 .row:before, 
@@ -101,6 +104,7 @@ nav ul>li>a {
 .col-11 {width: 91.66%;} 
 .col-12 {width: 100%;}
 .col-offset-0 {margin-left: 0;} 
+.col-offset-0-25 {margin-left: 2.78%}
 .col-offset-1 {margin-left: 8.33%;} 
 .col-offset-2 {margin-left: 16.66%;} 
 .col-offset-3 {margin-left: 25%;} 
@@ -157,8 +161,12 @@ h3, h2 {
 	border-top: 5px solid #ededed;
 }
 .education [class*="col-"]:hover, .job [class*="col-"]:hover {
-	background-color: orange;
+	background-color: #edd35e;
 }	
+.education a {
+	color: black;
+}
+
 p.img-caption {
 	font-size: 10px;
 	padding: 0;
@@ -206,26 +214,27 @@ p.img-caption a {
 .project .project5{
 	background-image: url("images/project5.jpg"); 
 }
-.project .col-2{
+.project .style-project{
 	background-size: cover;
 	height: 140px;
-	width: 200px;
 	border: solid #ededed 5px; 
-	margin: 20px;
 	padding: 0;
 }
 .project .layer{
 	background:rgba(0,0,0,0.5);
-	line-height:45px;
+	line-height:30px;
 	height: 100%;
 	width: 100%;
-	padding: 0;
+	padding: 0 5px;
 	margin: 0;
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 	display: none;
 }
-.project .col-2:hover .layer{
+.project a {
+	text-decoration: none;
+}
+.project .style-project:hover .layer{
 	display: block;
 }
 .hobby {
@@ -233,6 +242,12 @@ p.img-caption a {
 	margin-bottom: 20px;
 	margin-top: 20px;
 	background-image: url("images/imagination_min.jpg");
+	padding: 10px;
+	padding-bottom: 30px;
+}
+.hobby-desc {
+	background-color: rgb(255, 255, 255, 0.5);
+	margin-bottom: 10px;
 }
 .hobby .gallery {
 	height: 523px;
@@ -250,7 +265,8 @@ p.img-caption a {
 }
 .gallery > ul li {
 	/*display: inline-block;*/  /*not needed ?*/
-	float: left;*/
+	float: left;
+	background-size: 100%;
 }
 .gallery .bookgirl {
 	background-image: url("images/bookgirl_min.jpg");
@@ -267,7 +283,7 @@ p.img-caption a {
 	height: 523px;
 	width: 400px;
 }
-@media (max-width: 767px){
+@media (max-width: 936px){
     /* For tablets, mobiles: */
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -286,17 +302,33 @@ p.img-caption a {
 		float: left; 
 		min-height: 1px; 
 		padding: 5px;
-		width: 100%;
+		/* width: 100%; */
+		text-align: center;
 	}
+    .col-offset-s-0 {margin-left: 0;}
+    .col-offset-s-0-5 {margin-left: 4.16%;}
+    .col-offset-s-1 {margin-left: 8.33%;}
+    .col-offset-s-3-5 {margin-left: 29.16%;}
+
 	nav {
-    display:none;
-	position: absolute;
-    margin:0;
-    top:0;
-	background: #313234;
-    width:100%;
-    padding: 0;
+		display:none;
+		/*position: absolute;*/ /*menu mobile on the right side*/
+		margin:0;
+		top:0;
+		background: #313234;
+		width:100%;
+		padding: 0;
     
+	}
+
+	nav.show {
+		display:block;
+		width: 150px;
+		top: 50px;
+	}
+	nav ul li{
+		display: block;
+	
 	}
     .btn {
       width:100%;
@@ -306,31 +338,53 @@ p.img-caption a {
       border-radius:0;
 	  color: white;
     }
+	.open-menu{
+		text-align: right;
+		padding-right: 50px;
+		line-height: 40px;
+		cursor: pointer;
+	}
       
     .btn.hide {display:block;}
     .btn.open-menu {display:block;}
 	.hero {
-		height: 200px;
 		background-image: url('images/hero2.jpg');
 	}
-	.slogan {
+	/*.slogan {
 		font-size:0.8rem;
 		padding-right: 5px;
 		max-width: 60vw;
 		height: 100px;
 		margin-top:50px;
-	}
-	.slogan h1 {
-		line-height: 100px;
+	}*/
+	.slogan {
 		padding-left: 30px;
+		max-width: 90vw;
 	}
+	
 	.aboutme article {
 		padding-left: 5px;
 	}
+	
 	.project .layer{
 		display: block;
 	}
-	.col-offset-1 {margin-left: 0;} 
-	.col-offset-2 {margin-left: 0;} 
-	.col-offset-6 {margin-left: 0;} 	
+	.style-project {
+		margin-bottom: 10px;
+	}
+	.hobby .gallery {
+		height: 261px;
+		width: 200px;
+	}
+	.gallery .bookgirl {
+		width: 200px;
+	}
+	.gallery .dog {
+		width: 200px;
+	}
+	.gallery .forest {
+		width: 200px;
+	}
+
+	
 }

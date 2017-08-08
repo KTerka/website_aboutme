@@ -10,7 +10,9 @@ function initCarousel () {
 	}
 	
 	function changeSlide(){
-		carouselList.animate({'marginLeft':-400}, 1000, moveFirstSlide);
+		var imageWidth = $('.gallery li').width();
+		console.log(imageWidth);
+		carouselList.animate({'marginLeft':-imageWidth}, 1000, moveFirstSlide);
 	}
 	
 	setInterval(changeSlide, 2000);
