@@ -24,6 +24,7 @@ body header, footer {
 header {
 	position: fixed;
 	width: 100%;
+	z-index: 1000000;
 }
 
 nav{
@@ -130,13 +131,15 @@ nav ul>li>a {
 	padding-left: 100px;
 	text-align: justify;
 }
-.aboutme .contact ul{
-	list-style: none;
-	margin-top: 50px;
-	border: 2px solid #ededed;
-	padding: 15px;
-	text-align: center;	
+.aboutme article p{
+	padding-top: 10px;
 }
+
+.aboutme article p a{
+	text-decoration: none;
+	color: white;
+}
+
 .aboutme .contact ul b {
 	text-transform: uppercase;
 }
@@ -153,14 +156,14 @@ h3, h2 {
 	text-align: center;
 	text-transform: uppercase;	
 }
-.education [class*="col-"], .job [class*="col-"]  {
-	border: 5px solid #ededed; /*?????!!!!!!!!!!!!!*/
+.cv .addborder {
+	border: 5px solid #ededed;
 	border-top: none;
 }
-.education [class*="col-"]:first-child, .job [class*="col-"]:first-child {
+.education .addborder:first-child, .job .addborder:first-child {
 	border-top: 5px solid #ededed;
 }
-.education [class*="col-"]:hover, .job [class*="col-"]:hover {
+.cv .addborder:hover {
 	background-color: #edd35e;
 }	
 .education a {
@@ -185,12 +188,11 @@ p.img-caption a {
     line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
     color: white; 
 }
-.html {width: 60%; background-color: #4CAF50;} /* Green */
-.css {width: 40%; background-color: #2196F3;} /* Blue */
-.js {width: 30%; background-color: #f44336;} /* Red */
-.rest {width: 30%; background-color: #808080;} /* Dark Grey */
+.tech-skill{
+	padding: 10px;
+}
 .eng {width: 70%; background-color: #4CAF50;} /* Green */
-.ger {width: 40%; background-color: #2196F3;}
+.ger {width: 40%; background-color: #2196F3;}/* Blue */
 .myskills .col-6 {
 	padding: 10px 3px;
 }
@@ -254,7 +256,7 @@ p.img-caption a {
 	width: 400px;
 	border: solid #ededed 2px;
 	padding: 0;
-	margin: 0 auto;  /*obcject is in the center of the website*/
+	margin: 0 auto;  /*object is in the center of the website*/
 	overflow: hidden;
 }
 .gallery > ul {
@@ -264,7 +266,6 @@ p.img-caption a {
 	width: 1200px;
 }
 .gallery > ul li {
-	/*display: inline-block;*/  /*not needed ?*/
 	float: left;
 	background-size: 100%;
 }
@@ -283,6 +284,59 @@ p.img-caption a {
 	height: 523px;
 	width: 400px;
 }
+
+.contact {
+
+	margin: 0;
+	padding: 20px;
+	background-color: #f3f3f3;
+}
+form{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;	
+	background-color:#fff; 
+    border:2px solid #ccc; 
+    border-radius:10px; 
+	padding:10px;
+}
+form h3{
+	color:#555555;
+	margin: 5px;
+}
+form label{
+	display: block;
+    margin-bottom:2px;
+    font-weight:bold; 
+    text-transform: uppercase; 
+    font-size:12px; 
+    color:#555555;
+}
+form textarea, form input {
+	
+	padding:2px; 
+	border-radius:3px; 
+	border:1px solid #ccc; 
+	margin-bottom:10px; 
+	width:50%; 
+}
+form input.submit {
+	width:50%; 
+	cursor:pointer; 
+	margin-bottom:0px;
+	background-color: #ccc;
+}
+p#msg_success {
+	text-align: center;
+	color: green;
+	display: none;
+}
+p#msg_fail {
+	text-align: center;
+	color: red;
+	display: none;
+}
+
 @media (max-width: 936px){
     /* For tablets, mobiles: */
     .col-s-1 {width: 8.33%;}
@@ -302,7 +356,6 @@ p.img-caption a {
 		float: left; 
 		min-height: 1px; 
 		padding: 5px;
-		/* width: 100%; */
 		text-align: center;
 	}
     .col-offset-s-0 {margin-left: 0;}
@@ -312,15 +365,12 @@ p.img-caption a {
 
 	nav {
 		display:none;
-		/*position: absolute;*/ /*menu mobile on the right side*/
 		margin:0;
 		top:0;
 		background: #313234;
 		width:100%;
 		padding: 0;
-    
 	}
-
 	nav.show {
 		display:block;
 		width: 150px;
@@ -350,13 +400,6 @@ p.img-caption a {
 	.hero {
 		background-image: url('images/hero2.jpg');
 	}
-	/*.slogan {
-		font-size:0.8rem;
-		padding-right: 5px;
-		max-width: 60vw;
-		height: 100px;
-		margin-top:50px;
-	}*/
 	.slogan {
 		padding-left: 30px;
 		max-width: 90vw;
@@ -384,7 +427,5 @@ p.img-caption a {
 	}
 	.gallery .forest {
 		width: 200px;
-	}
-
-	
+	}	
 }

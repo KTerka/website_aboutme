@@ -11,13 +11,12 @@ function initCarousel () {
 	
 	function changeSlide(){
 		var imageWidth = $('.gallery li').width();
-		console.log(imageWidth);
 		carouselList.animate({'marginLeft':-imageWidth}, 1000, moveFirstSlide);
 	}
 	
 	setInterval(changeSlide, 2000);
 	
-	$('.slogan').delay(500).fadeIn(2000);
+	$('.slogan').delay(50).fadeIn(2000);
 }
 
 function DisplayTime(){
@@ -46,17 +45,49 @@ $(function(){
 	
 	DisplayTime();	
 	
-	$("nav a").on('click',function(){
-	var link = $(this).attr('href');
-	$('html,body').animate({scrollTop: ($(link).offset().top - 50)},'slow');
-    return false;
-  });
+	$("nav a").on('click',function() {
+		var link = $(this).attr('href');
+		$('html,body').animate({scrollTop: ($(link).offset().top - 50)},'slow');
+		return false;
+	});
   
-  $('.open-menu, .hide, .hide-mobile').click(function(){
-    $('nav').toggleClass('show');  
-  });
+	$('.open-menu, .hide, .hide-mobile').click(function(){
+		$('nav').toggleClass('show');  
+	});
+  
+	window.sr = ScrollReveal();
+    sr.reveal('.icon', {
+        reset: true,
+        delay: 50,
+        distance: 50
+    }, 200);
+	
+	$('form').submit(function(e) {
+		$.ajax({
+			url: 'http://katarzyna-terka.pl/contact.php',
+			type: 'post',
+			dataType: 'json',
+			data: {
+				email: $('#email_text').val(),
+				title: $('#title_text').val(),
+				message: $('#msg_text').val()
+			},
 
-	
-	
+			success: function (response) {
+				if (response.status === "success") {
+					$('#msg_success').show();
+					$('#msg_fail').hide();
+				} else {
+					$('#msg_fail').show();
+					$('#msg_success').hide();
+				}
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+				console.error(jqXHR.errorThrown);
+			}
+			
+		});
+		e.preventDefault();
+	});
 });
 

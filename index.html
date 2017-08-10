@@ -9,9 +9,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet"> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<title> Katarzyna Terka</title>
+		<title> Katarzyna Terka </title>
 	</head>
-	<body>
+	<body onload="contact_form.reset();">
 		<header>
 		<span class="btn open-menu">MENU</span>
 			<nav class="container">
@@ -19,7 +19,7 @@
 					<li><a href="#about_me" class="btn hide-mobile" >O mnie</a></li>
 					<li><a href="#contact_to" class="btn hide-mobile">Kontakt</a></li>
 					<li><a href="#cv" class="btn hide-mobile">CV</a></li>
-					<li><a href="#skills" class="btn hide-mobile">Umiejętności</a></li>
+					<li><a href="#my_skills" class="btn hide-mobile">Umiejętności</a></li>
 					<li><a href="#projects" class="btn hide-mobile">Projekty</a></li>
 					<li><a href="#hobby" class="btn hide-mobile">hobby</a></li>
 				</ul>
@@ -32,31 +32,26 @@
 		</section>
 		<section class="aboutme" id="about_me">
 			<div class="row container">
-				<div class="col-4 col-s-12 myphoto">
-					<img src="images/KTerka.jpg" alt="Katarzyna Terka">
+				<div class="col-4 col-s-12">
+					<img src="images/KTerka.jpeg" alt="Katarzyna Terka">
 					<p class="img-caption">Zdjęcie: <a href="http://magdaolek.pl/" target="_blank">Magda Olek</a></p>
 				</div>
 				<article class="col-8 col-s-12 ">
 					<h2>Katarzyna Terka</h2>
 					<p>Jestem typowym umysłem ścisłym i technicznym. Od początku szkolnej kariery matematyka była moim ulubionym przedmiotem. </p>
 					<p>Jednak po ukończeniu studiów informatycznych zrozumiałam, że lepiej odnajduję się w branży IT. 
-					Od tego czasu uczestnicze w kursach programowania, oglądam tutoriale, ucze się z różnych dostępnych materiałów.
+					Od tego czasu uczestniczę w kursach programowania, oglądam tutoriale, ucze się z różnych dostępnych materiałów.
 					Mój zmysł techniczny pomaga mi w szybkim i efektywnym opanowaniu nowych języków programowania lub samych programów.
 					</p>
 					<p>Jednak wiem, że najwięcej i najszybciej nauczę się w pracy.  Dlatego obecnie szukam stanowiska i firmy, 
-							które pozwolą mi rowizjać się w nowym kierunku i tym samym być wartościowym pracownikiem.</p>
-				
-					<div class="contact col-12 col-s-12" id="contact_to" >
-						<ul>
-							<li><b>E-mail:</b>
-								<a href="mailto:katarzynaterka7@gmail.com">katarzynaterka7@gmail.com</a>
-							</li>
-							<br>
-							<li><b>Telefon:</b>
-								<a href="callto: +48 692 755 594">+48 692 755 594</a>
-							</li>
-						</ul>
-					</div>
+							które pozwolą mi rozwijać się w nowym kierunku i tym samym być wartościowym pracownikiem.</p>
+					
+					<p><b>Zapraszam do kontaktu. Mój mail to:</b><p>
+						<a href="mailto:poczta@katarzyna-terka.pl">poczta@katarzyna-terka.pl</a>
+								
+								
+					
+					
 				</article>
 			</div>
 		</section>
@@ -66,15 +61,15 @@
 				<div class="education col-6 col-s-12">
 					<h3>Wykształcenie i kursy</h3>
 					<div class="row">
-						<div class="col-12 col-s-12">
+						<div class="col-12 col-s-12 addborder">
 							<p>04-07.2017  kurs Kodilla Bootcamp <strong>Front-End Developer</strong>
 								<br><span><a href="https://kodilla.com/pl" target="_blank">kodilla.com</a></span></p>
 						</div>
-						<div class="col-10 col-offset-1 col-s-12 col-offset-s-0">
+						<div class="col-10 addborder col-offset-1 col-s-12 col-offset-s-0">
 							<p>2016-2017 studia <strong>podyplomowe z Informatyki</strong> dla nauczycieli
 								<br><span><a href="http://wsuniterra.pl/" target="_blank">Uniterra</a></span></p>
 						</div>
-						<div class="col-8 col-offset-2 threedelay col-s-12 col-offset-s-0">
+						<div class="col-8 addborder col-offset-2 threedelay col-s-12 col-offset-s-0">
 							<p>2005-2010 studia stacjonarne, <strong>Matematyka</strong>, specjalność: <strong>matematyka stosowana</strong>
 							<br><span><a href="https://www.wmi.amu.edu.pl/pl/" target="_blank" >Uniwersytet im. A. Mickiewicza w Poznaniu</a></span></p>
 						</div>
@@ -100,27 +95,34 @@
 				</div>
 			</div>	
 		</section>
-		<section class="container myskills" id="skills">
+		<section class="container myskills" id="my_skills">
 			<div class="row">
 				<h2>Umiejętności</h2>
 					<div class="col-6">
 						<div>
 							<h3> techniczne</h3>
-							<p>HTML5</p>
-							<div class="container-skillbars">
-							  <div class="skills html">60%</div>
+							<div class="row tech-skill">
+								<div class="col-4 col-s-12 icon">
+									<img src="images/html5.png">
+								</div>
+								<div class="col-4 col-s-12 icon">
+									<img src="images/css3.png">
+								</div>
+								<div class="col-4 col-s-12 icon">
+									<img src="images/sass.png">
+								</div>
 							</div>
-							<p>CSS3</p>
-							<div class="container-skillbars">
-							  <div class="skills css">40%</div>
-							</div>
-							<p>JavaScript</p>
-							<div class="container-skillbars">
-							  <div class="skills js">30%</div>
-							</div>
-							<p>Bootstrap, jQuery</p>
-							<div class="container-skillbars">
-							  <div class="skills rest">30%</div>
+							
+							<div class="row tech-skill">
+								<div class="col-4 col-s-12 icon">
+									<img src="images/bootstrap.png">
+								</div>
+								<div class="col-4 col-s-12 icon">
+									<img src="images/js.png">
+								</div>
+								<div class="col-4 col-s-12 icon">
+									<img src="images/jQuery.png">
+								</div>
 							</div>
 							
 						</div>
@@ -130,11 +132,11 @@
 						<h3>językowe</h3>
 						<p>ANGIELSKI</p>
 						<div class="container-skillbars">
-						  <div class="skills eng">70%</div>
+						  <div class="skills eng">B2</div>
 						</div>
 						<p>NIEMIECKI</p>
 						<div class="container-skillbars">
-						  <div class="skills ger">40%</div>
+						  <div class="skills ger">A2</div>
 						</div>
 					</div>
 				</div>
@@ -186,6 +188,24 @@
 				</div>		
 			</div>
 		</section>
+		<section class="container" id="contact_to">
+			<div class="contact col-12 col-s-12"  >
+				<form id="contact_form">
+					<h3>Formularz kontaktowy</h3>
+					<p id="msg_success">Wiadomość została wysłana.</p>
+					<p id="msg_fail">Wystąpił błąd</p>
+					<label>Email: </label>
+					<input id="email_text" type="email" placeholder="jankowalski@gmail.com" required>
+					<label>Temat: </label>
+					<input id="title_text" type="text" placeholder="Temat twojej wiadomości" required>
+					<label>Wiadomość: </label>
+					<textarea id="msg_text" rows="15" cols="40" placeholder="Napisz tu wiadomość" required></textarea>
+					<input id="send_button" class="submit" type="submit" value="Wyślij">
+				</form>			
+							
+			</div>
+		</section>
+		
 		<div id="clock">
 			Zegar
 		</div>
@@ -193,5 +213,6 @@
 			Copyright Katarzyna Terka 2017
 		</footer>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	</body>
 </html>
