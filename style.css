@@ -26,7 +26,6 @@ header {
 	width: 100%;
 	z-index: 1000000;
 }
-
 nav{
 	float: right;
 }
@@ -74,7 +73,7 @@ nav ul>li>a {
 	background-color: rgba(0, 0, 0, 0.3);
 	margin-top: 100px;
 	padding: 0 50px 0;
-	display: none;
+	display: none;	
 }
 .slogan h1{
 	line-height: 200px;
@@ -134,12 +133,10 @@ nav ul>li>a {
 .aboutme article p{
 	padding-top: 10px;
 }
-
 .aboutme article p a{
 	text-decoration: none;
 	color: white;
 }
-
 .aboutme .contact ul b {
 	text-transform: uppercase;
 }
@@ -169,7 +166,6 @@ h3, h2 {
 .education a {
 	color: black;
 }
-
 p.img-caption {
 	font-size: 10px;
 	padding: 0;
@@ -201,8 +197,7 @@ p.img-caption a {
 	padding: 15px;
 }
 .project .project1{
-	background-image: url("images/project1.jpg"); 
-	
+	background-image: url("images/project1.jpg"); 	
 }
 .project .project2{
 	background-image: url("images/project2.jpg"); 
@@ -284,7 +279,6 @@ p.img-caption a {
 	height: 523px;
 	width: 400px;
 }
-
 .contact {
 
 	margin: 0;
@@ -336,7 +330,12 @@ p#msg_fail {
 	color: red;
 	display: none;
 }
-
+section#contact_to:before, 
+section#contact_to:after { 
+	content:"";
+	display: table; 
+	clear: both;
+}
 @media (max-width: 936px){
     /* For tablets, mobiles: */
     .col-s-1 {width: 8.33%;}
@@ -350,8 +349,8 @@ p#msg_fail {
     .col-s-9 {width: 75%;}
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-	
+    .col-s-12 {width: 100%;
+	}
 	[class*="col-"] { 
 		float: left; 
 		min-height: 1px; 
@@ -361,8 +360,8 @@ p#msg_fail {
     .col-offset-s-0 {margin-left: 0;}
     .col-offset-s-0-5 {margin-left: 4.16%;}
     .col-offset-s-1 {margin-left: 8.33%;}
-    .col-offset-s-3-5 {margin-left: 29.16%;}
-
+    .col-offset-s-3-5 {margin-left: 29.16%;
+	}
 	nav {
 		display:none;
 		margin:0;
@@ -378,7 +377,6 @@ p#msg_fail {
 	}
 	nav ul li{
 		display: block;
-	
 	}
     .btn {
       width:100%;
@@ -393,8 +391,7 @@ p#msg_fail {
 		padding-right: 50px;
 		line-height: 40px;
 		cursor: pointer;
-	}
-      
+	} 
     .btn.hide {display:block;}
     .btn.open-menu {display:block;}
 	.hero {
@@ -408,7 +405,6 @@ p#msg_fail {
 	.aboutme article {
 		padding-left: 5px;
 	}
-	
 	.project .layer{
 		display: block;
 	}
